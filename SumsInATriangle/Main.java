@@ -1,34 +1,22 @@
 import java.io.*;
-import java.util.Scanner;
 public class Main{
 	public static int n=0;
 	public static int cache[][];
 	public static int a[][];
 	public static void main(String[] args) throws IOException, NumberFormatException{
-	//	Scanner sc=new Scanner(System.in);
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		int t=Integer.parseInt(br.readLine());
 		for(int l=0;l<t;l++){
-		//	n=sc.nextInt();
 			n=Integer.parseInt(br.readLine());
 			cache=new int[n][n];
 			a=new int[n][n];
 			for(int i=0;i<n;i++){
 				String s=br.readLine();
-		//		a[i]=Integer.parseInt(s.split(" "));
 				String str[]=s.split(" ");
 				for(int j=0;j<=i;j++){
-		//			a[i][j]=sc.nextInt();
 					a[i][j]=Integer.parseInt(str[j]);
-//					cache[i][j]=0;
 				}
 			}
-//                        for(int i=0;i<n;i++){
- //                             for(int j=0;j<=i;j++){
-   //                                     System.out.print(" "+a[i][j]);
-     //                           }
-///				System.out.println();
-   //                     }
 			System.out.println(check(0,0));
 		}
 	}
